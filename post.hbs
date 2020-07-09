@@ -68,6 +68,19 @@ into the {body} of the default.hbs template --}}
               </div>
               {{content}}
             </div>
+            {{!-- List of tags  --}}
+            {{#if tags}}
+              <section class="m-tags in-post">
+                <h3 class="m-submenu-title">{{t "Tags"}}</h3>
+                <ul>
+                  {{#foreach tags}}
+                    <li>
+                    <a href="{{url}}" title="{{name}}">{{name}}</a>
+                    </li>
+                  {{/foreach}}
+                </ul>
+              </section>
+            {{/if}}
           </div>
         </div>
         {{!-- Email subscribe form at the bottom of the page --}}
@@ -163,7 +176,7 @@ into the {body} of the default.hbs template --}}
           </div>
         </section>
         {{!-- If you want to embed comments, this is a good place to do it! --}}
-        {{!--
+
           <section class="m-comments">
             <div class="m-load-comments">
               <div class="m-load-comments__line"></div>
@@ -173,21 +186,13 @@ into the {body} of the default.hbs template --}}
             </div>
             <div class="m-load-comments__iframe l-wrapper in-comments js-comments-iframe">
               <div id="disqus_thread"></div>
-              <script>
-                var disqus_config = function () {
-                  this.page.url = "{{url absolute="true"}}";
-                  this.page.identifier = "ghost-{{comment_id}}"
-                };
-                (function () {
-                  var d = document, s = d.createElement('script');
-                  s.src = 'https://CHANGETHIS.disqus.com/embed.js';
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-                })();
-              </script>
+                  <script 
+				          data-isso="//isso.talkingcrap.net/" 
+				          src="//isso.talkingcrap.net/js/embed.min.js">
+			          </script>
+			          <section id="isso-thread"></section>
             </div>
           </section>
-        --}}
       {{/post}}
       {{!-- Related posts --}}
       {{#get "posts" limit="3" filter="tags:[{{post.tags}}]+id:-{{post.id}}" include="tags,authors" as |related|}}
