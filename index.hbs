@@ -42,6 +42,7 @@ into the {body} of the default.hbs template --}}
   <div class="l-content">
     <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
       <div class="l-grid centered">
+        <span class="m-pagination__text">{{t "Cover image: "}}<a href="https://www.robertdowniephotography.com/Travel/i-cksbB3X/A" target="_blank" rel="noopener">Siloli Desert, Bolivia</a>{{t " © "}}<a href="https://www.robertdowniephotography.com/" target="_blank" rel="noopener">Robert Downie</a></span>
         {{#get "posts" filter="featured:true" include="authors,tags" limit="5" as |featured|}}
           {{#if featured}}
             <div class="m-featured-slider glide js-featured-slider">
