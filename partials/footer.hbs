@@ -4,12 +4,11 @@ This footer template is shared across all the pages.
 
 <footer class="m-footer">
   <div class="m-footer__content">
-    <p class="m-footer-copyright">
-      <span><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC-BY-SA</a> {{t "Curious Dung Beetle "}} {{date format="YYYY"}}</span>
-      <span>&nbsp; &bull; &nbsp;</span>
-      <span><a href="https://talkingcrap.net/about/#colophon" target="_blank" rel="noopener">Colophon</a></span>
-    </p>
-
+    {{#if @site.secondary_navigation}}
+      <nav class="m-footer__nav-secondary" role="navigation" aria-label="{{t "Secondary menu in footer"}}">
+        {{navigation type="secondary"}}
+      </nav>
+    {{/if}}
     <nav class="m-footer-social">
       {{#if @site.facebook}}
         <a href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener" aria-label="Facebook">
@@ -25,5 +24,10 @@ This footer template is shared across all the pages.
           <span class="icon-rss"></span>
         </a>
     </nav>
+    <p class="m-footer-copyright">
+      <span><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC-BY-SA</a> {{t "Curious Dung Beetle "}} {{date format="YYYY"}}</span>
+      <span>&nbsp; &bull; &nbsp;</span>
+      <span><a href="https://talkingcrap.net/about/#colophon" target="_blank" rel="noopener">Colophon</a></span>
+    </p>
   </div>
 </footer>
