@@ -4,7 +4,7 @@ Liebling is a beautiful and clean Ghost theme that is easy and comfortable to us
 
 If you find this theme useful, please consider to make a donation to support its development! 🙏🏼
 
-<a href="https://www.buymeacoffee.com/eddiesigner" target="_blank"><img src="https://res.cloudinary.com/edev/image/upload/v1583011476/button_y8hgt8.png" alt="Donate" style="width: 250px !important; height: 60px !important;" width="250" height="60"></a>
+<a href="https://ko-fi.com/eddiesigner" target="_blank"><img src="https://res.cloudinary.com/edev/image/upload/v1583011476/button_y8hgt8.png" alt="Donate" style="width: 250px !important; height: 60px !important;" width="250" height="60"></a>
 
 ## Preview
 
@@ -94,6 +94,8 @@ From now on, this theme is only compatible with Ghost 3
 * Persian (Farsi) by [Aminoiz](https://github.com/Aminoiz)
 * Ukrainian by [partizan007](https://github.com/partizan007)
 * Kazakh by [arshyn-t](https://github.com/arshyn-t)
+* Korean by [chocosobo](https://github.com/chocosobo)
+* Japanese by [ViaSnake](https://github.com/ViaSnake)
 
 ## Tests performed
 
